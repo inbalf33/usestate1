@@ -1,0 +1,29 @@
+.counter{
+    background-color: rgb(208, 241, 245);
+    border-width: 10px;
+
+}
+
+button{
+    background-color: rgb(247, 236, 210);
+    margin-left: 20px;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 50%;
+    height: 70px;
+    width: 200px;
+    border-style: groove; cursor: pointer; font-size: 20px;   
+}
+
+.txtOne{
+    color: rgb(255, 0, 0);
+}
+
+.txtReset{
+    color: rgb(255, 0, 0);
+}
+
+.countVarible{
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+}

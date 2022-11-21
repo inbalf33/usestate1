@@ -1,9 +1,11 @@
 import './App.css';
+import Counter from './Counter';
 
 function App() {
   return (
     <div className="App">
-      Usestate
+      <h2> <u>Inbal Fish Usestate</u></h2>
+      <Counter />
     </div>
   );
 }
