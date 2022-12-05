@@ -1,30 +1,48 @@
 import './Counter.css';
 import { useState } from "react";
-
+import { useEffect } from 'react';
 
 function Counter(props) {
     const {delta} = props;
     const {maxCounter} = props;
-    const [count, setCount] = useState(0);   
+    const {getReset} = props;
+    const {getAdd} = props;
+    const {needToReset} = props;
+    const [count, setCount] = useState(0); 
+    
+    useEffect(()=>{
+        if(needToReset){
+            setCount(0);
+            getReset(false);
+        }
+    },[needToReset, getReset])
 
     function incr(){
         setCount(
             function(oldCount){
+               
                 if (oldCount + delta > maxCounter)
                 {
+                    getAdd(oldCount); // return to the maxValue the oldCount without delat beacuse it pass the maxCounter
                     return 0;
                 }
                 else {
-                    return oldCount + delta;
+                    getAdd(oldCount + delta); //return to the maxValue the oldCount with delat
+                    return oldCount + delta;                    
                 }
                 
-            }
-        )
-        console.log(maxCounter);
+            }            
+        )        
+        //console.log(maxCounter);
+
+        
+        //getAdd("Hi Inbal");
+
     }
 
     function reset(){
-        setCount(0)
+        getReset(true);
+        //setCount(0);
     }
 
 

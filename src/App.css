@@ -41,3 +41,11 @@
 input {
   width: 40px; text-align: center; margin-left: 5px;
 }
+
+.maxVal {
+  margin-top: 12px;
+}
+
+#maxV {
+  color: rgb(219, 3, 3); font-size: 20px;
+}
